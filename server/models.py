@@ -1,15 +1,11 @@
 from flask_sqlalchemy import SQLAlchemy
 from sqlalchemy import MetaData
 
-# contains definitions of tables and associated schema constructs
+# Create the Flask SQLAlchemy extension
 metadata = MetaData()
-
-# create the Flask SQLAlchemy extension
 db = SQLAlchemy(metadata=metadata)
 
-# define a model class by inheriting from db.Model.
-
-
+# Define the Pet model class
 class Pet(db.Model):
     __tablename__ = 'pets'
 
